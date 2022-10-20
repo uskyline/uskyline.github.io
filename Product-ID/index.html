@@ -43,9 +43,9 @@ body {
   let params = (function(){var p={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){p[k]=v});return p;})();(/(\d+)\.html$/.exec(location.pathname)) ? /(\d+)\.html$/.exec(location.pathname)[1] : '';
   let spiderx = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
   if(params.item && !spiderx) {
-   location.href = 'https://tydack.com/ko/i/'+params+'';
+   location.href = 'https://tydack.com/ko/i/'+params.item+'';
   } else if(params.item && spiderx) {
-   location.replace('https://tydack.com/ko/i/'+params+'.html');
+   location.replace('https://tydack.com/ko/i/'+params.item+'.html');
   }
  })();
  </script>
